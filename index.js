@@ -103,3 +103,9 @@ app.get('/listSchools', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+
+//  for netlify deployment
+const serverless = require("serverless-http");
+app.use("/.netlify/functions/app", express.Router());
+module.exports.handler = serverless(app);
