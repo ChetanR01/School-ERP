@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 // MySQL Connection
 const db = mysql2.createConnection({
 
-    host: 'mysql.railway.internal',
+    host: 'mysql://root:pekUlNfPgKHnxYDvPmFUqjouhyoACaVt@autorack.proxy.rlwy.net:59275/railway',
     user: 'root', // Replace with your MySQL username
     password: 'pekUlNfPgKHnxYDvPmFUqjouhyoACaVt', // Replace with your MySQL password
     database: 'railway',
