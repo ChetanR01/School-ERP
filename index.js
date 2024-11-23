@@ -3,7 +3,7 @@ import mysql2 from 'mysql2';
 import bodyParser from 'body-parser';
 
 const app = express();
-const PORT = 8080;
+const PORT = 3000;
 
 // Middleware
 app.use(bodyParser.json());
@@ -11,10 +11,11 @@ app.use(bodyParser.json());
 // MySQL Connection
 const db = mysql2.createConnection({
 
-    host: 'localhost',
+    host: 'mysql.railway.internal',
     user: 'root', // Replace with your MySQL username
-    password: 'root', // Replace with your MySQL password
-    database: 'school_management',
+    password: 'pekUlNfPgKHnxYDvPmFUqjouhyoACaVt', // Replace with your MySQL password
+    database: 'railway',
+    port: 3306
 });
 
 db.connect((err) => {
